@@ -57,13 +57,12 @@ def sum_array(array)
 end
 
 def add_s(array)
-  i = 0
-  s_array = Array.new
-  array.each do |word|
-    while i != 2 && i < array.length
-      s_array << word + "s"
-    end
-    i += 1
-  end
-  s_array
+  array.each_with_index.collect{|element, index| 
+    if index != 2 
+      element = element + "s"
+    else 
+      element = element 
+    end 
+  }
 end
+
