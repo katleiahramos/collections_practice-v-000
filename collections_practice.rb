@@ -60,7 +60,7 @@ def add_s(array)
   i = 0
   s_array = Array.new
   array.each do |word|
-    while i != 2
+    while i != 2 && i < array.length
       s_array << word + "s"
     end
     i += 1
